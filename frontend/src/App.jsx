@@ -4,10 +4,6 @@ function App() {
 
   return (
     <>
-      <Button>
-        Hello
-      </Button>
-
     </>
   )
 }
