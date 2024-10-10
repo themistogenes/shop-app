@@ -1,6 +1,8 @@
 import mongoose from "mongoose"
 import Product from "../models/product.model.js";
 
+// get all products
+// GET: /api/products
 export const getProducts = async (req, res) => {
   try {
     const products = await Product.find({});
@@ -11,6 +13,8 @@ export const getProducts = async (req, res) => {
   }
 }
 
+// create product
+// POST: /api/products
 export const createProduct = async (req, res) => {
   const product = req.body; // user will send this data
 
@@ -29,6 +33,8 @@ export const createProduct = async (req, res) => {
   }
 }
 
+// update product
+// PUT: /api/products/:id
 export const updateProduct = async (req, res) => {
   const { id } = req.params;
   const product = req.body;
@@ -46,6 +52,8 @@ export const updateProduct = async (req, res) => {
   }
 }
 
+// delete product
+// DELETE: /api/products/:id
 export const deleteProduct = async (req, res) => {
   const { id } = req.params;
 
