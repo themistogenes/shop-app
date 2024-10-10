@@ -1,8 +1,4 @@
 import mongoose from "mongoose"
-import dotenv from "dotenv"
-
-// allow access to process.env
-dotenv.config();
 
 // connect to MongoDB
 export const connectDB = async () => {
