@@ -7,12 +7,16 @@ import {
   HStack,
   IconButton,
   Image, 
-  Text 
+  Text,
+  useColorModeValue
 } from "@chakra-ui/react"
 
 import { DeleteIcon, EditIcon } from "@chakra-ui/icons"
 
 const ProductCard = ({ product }) => {
+  const textColor = useColorModeValue("gray.600", "gray.200");
+  const bg = useColorModeValue("white", "gray.800");
+
   return (
     <Box
       shadow={"lg"}
@@ -23,6 +27,7 @@ const ProductCard = ({ product }) => {
         transform: "translateY(-5px)", 
         shadow: "xl"
       }}
+      bg={bg}
     >
       <Image
         src={product.image}
@@ -44,7 +49,7 @@ const ProductCard = ({ product }) => {
         <Text
           fontWeight={"bold"}
           fontSize={"xl"}
-          color={"textColor"}
+          color={textColor}
           mb={4}
         >
           ${product.price}
